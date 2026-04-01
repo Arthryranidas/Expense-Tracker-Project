@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+
+    <!-- balance div -->
+    <div class="balance-container">
+      <h3>Your Balance</h3>
+      <h1 id="balance"></h1>
+
+      <!-- summary div -->
+       <div class="summary">
+        <!-- income -->
+        <div class="income">
+          <h3>Income</h3>
+          <p id="income-amount"></p>
+        </div>
+        <!-- expense -->
+         <div class="expenses">
+          <h3>Expenses</h3>
+          <p id="expense-amount"></p>
+         </div>
+       </div>
+    </div>
+
+    <div class="main-content">
+      <!-- transaction div -->
+      <div class="transaction-container">
+        <h2>Transactions</h2>
+        <ul id="transaction-list">
+          <!--this is js generated -->
+        </ul>
+      </div>
+
+      <!-- form div -->
+      <div class="form-container">
+        <h2>Add Transactions</h2>
+
+        <form id="transaction-form" novalidate>
+          <!-- novalidate means:
+“Browser, don’t show your default validation UI. I’ll handle it.” -->
+
+          <!-- form grp for description -->
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" id="description" placeholder="Enter description..." required>
+          </div>
+
+          <!-- form grp for amount -->
+          <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" placeholder="Enter amount..." required>
+            <small> Use negative (-) for expenses </small>
+          </div>
+
+          <!-- btn f`or adding trans -->
+           <button type="submit">Add Transaction</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
