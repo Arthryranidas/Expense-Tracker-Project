@@ -119,4 +119,3 @@ function removeTransaction(id) {
 //initial render on the page 
 updateTransactionList();
 updateSummary();
-Keeps code clean, reliable, and scalable*/
