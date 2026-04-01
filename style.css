@@ -96,40 +96,16 @@
     flex-direction: column;
   }
   #transaction-list {
-    list-style: none; /*removes default bullet points*/
-    max-height: 500px; /*Sets the maximum height the list is allowed to grow
-The list can be shorter, but never taller than 500px
-    Without max-height → the page keeps growing vertically
-With max-height → the list stops growing and scrolls instead  */
-    overflow: auto; /* Adds a scrollbar only when needed
-Behavior: Few transactions → no scrollbar
-Many transactions → scrollbar appears
-📌 Depends on max-height
-Without a height limit, overflow does nothing */
+    list-style: none;
+    max-height: 500px; 
+    overflow: auto; 
     padding-right: 8px;
     flex-grow: 1; 
-    /* flex-grow: 1 tells the list:
-“Take up any remaining vertical space inside the container.”
-📌 Result:
-The heading stays at the top
-The list stretches nicely
-The form next to it stays aligned
-
-its use is about layout polish, not functionality. without use of 'flex-grow',extra empty space appears below list. and also the column looks uneven.
-SUMMARY-
-max-height → controls scrolling
-overflow: auto → enables scrolling
-flex-grow → controls layout balance */
   }
 
-  /* scrollbar defining */
   #transaction-list::-webkit-scrollbar {
   width: 8px;   /* vertical scrollbar */
 }
-
-
-  /* TODO: show this later in the video */
-/* TRACK is the bg of scrollbar */
   #transaction-list::-webkit-scrollbar-track {
     background-color: #fff;
     border-radius: 4px;
@@ -231,7 +207,7 @@ flex-grow → controls layout balance */
     transition: all 0.2s ease;
     background-color: white;
   }
-  /* when clicked on input, its about the border focus. */
+
   input:focus {
     outline: none;
     border-color: rgb(36, 36, 207);
